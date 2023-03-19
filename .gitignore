@@ -1,0 +1,11 @@
+x64/
+.vs/
+Debug/
+Release/
+Floor/Debug
+Floor/Release
+Floor/x64
+GE_Proj/Debug
+GE_Proj/Release
+GE_Proj/x64
+glfw_build/
