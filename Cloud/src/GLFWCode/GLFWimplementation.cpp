@@ -2,6 +2,7 @@
 #include "GLFWimplementation.h"
 
 
+
 namespace Cloud
 {
 	void GLFWimplementation::CreateWindow(int width, int height, const std::string& windowName)
