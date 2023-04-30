@@ -12,7 +12,7 @@ public:
 
 	virtual void OnUpdate() override
 	{
-		std::cout << "Game is running" << std::endl;
+		//std::cout << "Game is running" << std::endl;
 
 		Cloud::GameWindow::SwapBuffers();
 		Cloud::GameWindow::PollEvents();
