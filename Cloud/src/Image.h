@@ -2,7 +2,7 @@
 
 #include "pch.h"
 #include "CloudUtil.h"
-#include "ImplImage.h"
+//#include "ImplImage.h"
 
 namespace Cloud
 {
@@ -18,7 +18,7 @@ namespace Cloud
 		int GetHeight() const;
 
 	private:
-		ImplImage* mImplementation{ nullptr };
+		//ImplImage* mImplementation{ nullptr };
 	};
 
 }
