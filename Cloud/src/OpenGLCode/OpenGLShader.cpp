@@ -57,6 +57,7 @@ namespace Cloud
 
 
 		mProgram = glCreateProgram();
+
 		glAttachShader(mProgram, vertex);
 		glAttachShader(mProgram, fragment);
 		glLinkProgram(mProgram);
