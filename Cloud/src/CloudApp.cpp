@@ -5,8 +5,9 @@
 #include "GLFW/glfw3.h"
 #include "stb_image.h"
 
+#include "Renderer.h"
 #include "Shader.h"
-//#include "Image.h"
+#include "Image.h"
 #include "GameWindow.h"
 
 namespace Cloud 
@@ -23,6 +24,7 @@ namespace Cloud
 			}
 		}*/
 
+		/*
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 		{
 			CLOUD_ERROR("Failed to initialize GLAD");
@@ -49,6 +51,8 @@ namespace Cloud
 		glGenBuffers(1, &VBO);
 		glGenBuffers(1, &EBO);
 
+		glBindVertexArray(VAO);
+
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vdata), vdata, GL_STATIC_DRAW);
 
@@ -59,14 +63,15 @@ namespace Cloud
 		glEnableVertexAttribArray(0);
 
 		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2*sizeof(float)));
-		glEnableVertexAttribArray(1);
+		glEnableVertexAttribArray(1);*/
 
+		
 
+		/*
 		//TEXTURE//
 		unsigned int texture1;
 		glGenTextures(1, &texture1);
 		glBindTexture(GL_TEXTURE_2D, texture1);
-
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
@@ -85,9 +90,25 @@ namespace Cloud
 		glGenerateMipmap(GL_TEXTURE_2D);
 
 		stbi_image_free(data);
+		*/
 
+
+
+
+
+
+
+
+
+
+		Renderer renderer;
+
+		Image pic{ "../Assets/Images/test3.png" };
+		pic.Activate();
+
+		//Shader
 		Shader sProgram{
-			".. / Assets / Shaders / DefaultVertexShader.glsl", ".. / Assets / Shaders / DefaultFragmentShader.glsl"
+			"../Assets/Shaders/DefaultVertexShader.glsl", "../Assets/Shaders/DefaultFragmentShader.glsl"
 		};
 
 		sProgram.Pass2FloatValues("screenSize", GameWindow::GetWidth(), GameWindow::GetHeight());
@@ -96,9 +117,12 @@ namespace Cloud
 			glClearColor(0.3f, 0.0f, 0.0f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
+			/*
 			glBindVertexArray(VAO);
 			sProgram.Activate();
-			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);*/
+
+			renderer.Draw(pic, { 200, 100 });
 
 			OnUpdate();
 		}

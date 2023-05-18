@@ -81,8 +81,8 @@ namespace Cloud
 		std::string vShader;
 		std::ifstream ifile{ vertexFile };
 		std::string line;
-		while (ifile) {
-			std::getline(ifile, line);
+		while (std::getline(ifile, line)) {
+
 			vShader += line;
 			vShader += "\n";
 		}
@@ -106,8 +106,7 @@ namespace Cloud
 
 		std::string fShader;
 		std::ifstream i2file{ fragmentFile };
-		while (i2file) {
-			std::getline(i2file, line);
+		while (std::getline(i2file, line)) {
 			fShader += line;
 			fShader += "\n";
 		}
@@ -128,6 +127,7 @@ namespace Cloud
 
 
 		mProgram = glCreateProgram();
+
 		glAttachShader(mProgram, vertex);
 		glAttachShader(mProgram, fragment);
 		glLinkProgram(mProgram);
@@ -138,6 +138,7 @@ namespace Cloud
 			glGetProgramInfoLog(mProgram, 1024, NULL, infoLog);
 			std::cout << "ERROR::PROGRAM_LINKING_ERROR of type Program\n" << infoLog << "\n -------------------------------------" << std::endl;
 		}
+
 
 		glDeleteShader(vertex);
 		glDeleteShader(fragment);
