@@ -13,6 +13,7 @@ namespace Cloud
 		virtual void PollEvents() = 0;
 		virtual int GetWidth() const = 0;
 		virtual int GetHeight() const = 0;
+		virtual ~WindowImplementation() {};
 	
 	};
 }

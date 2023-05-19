@@ -18,3 +18,14 @@ int main() \
 	game.Run();\
 	return 0;\
 }
+
+#if CLOUD_DEBUG==2
+	#define CLOUD_LOG(x) std::clog<<"Log: "<<x<<std::endl;
+	#define CLOUD_ERROR(x) std::cerr<<"ERROR: "<<x<<std::endl;
+#elif CLOUD_DEBUG==1
+	#define CLOUD_LOG(x)
+	#define CLOUD_ERROR(x) std::cerr<<"ERROR: "<<x<<std::endl;
+#else
+	#define CLOUD_LOG(x)
+	#define CLOUD_ERROR(x)
+#endif

@@ -16,6 +16,8 @@ else()
 endif()
 
 add_subdirectory(glfw)
+add_subdirectory(glad)
+add_subdirectory(stbi)
 add_subdirectory(Cloud)
 add_subdirectory(GE_Proj)
 
