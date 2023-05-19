@@ -50,5 +50,10 @@ namespace Cloud
 			coords);
 	}
 
+	void Renderer::Clear()
+	{
+		mImplementation->Clear();
+	}
+
 
 }

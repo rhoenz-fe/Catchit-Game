@@ -70,7 +70,7 @@ namespace Cloud
 			(texCoords.xTexCoord + texCoords.texWidth) / float(image.GetWidth()),
 			texCoords.yTexCoord / float(image.GetHeight())
 		};
-
+		
 		
 		glBindVertexArray(mVAO);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vdata), vdata, GL_STATIC_DRAW);
@@ -78,5 +78,11 @@ namespace Cloud
 		shader.Activate();
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
+	}
+
+	void OpenGLRenderer::Clear()
+	{
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
 	}
 }

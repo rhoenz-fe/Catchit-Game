@@ -13,6 +13,9 @@ namespace Cloud
 			TextureBox texCoords,
 			Shader& shader,
 			ScreeCoord coords) override;
+
+		virtual void Clear() override;
+
 	private:
 		unsigned int mVBO, mVAO, mEBO;
 	};

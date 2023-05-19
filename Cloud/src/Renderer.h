@@ -21,6 +21,8 @@ namespace Cloud
 		void Draw(Image& image,TextureBox texCoords, Shader& shader, ScreeCoord coords);
 		void Draw(Image& image, TextureBox texCoords, ScreeCoord coords);
 
+		void Clear();
+
 	private:
 		std::unique_ptr<ImplRenderer> mImplementation {nullptr};
 

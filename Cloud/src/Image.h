@@ -18,7 +18,7 @@ namespace Cloud
 		int GetHeight() const;
 
 	private:
-		std::unique_ptr<ImplImage> mImplementation{};
+		std::unique_ptr<ImplImage> mImplementation{nullptr};
 	};
 
 }

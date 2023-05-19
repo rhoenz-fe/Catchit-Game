@@ -14,8 +14,8 @@ public:
 	{
 		//std::cout << "Game is running" << std::endl;
 
-		Cloud::GameWindow::SwapBuffers();
-		Cloud::GameWindow::PollEvents();
+		/*Cloud::GameWindow::SwapBuffers();
+		Cloud::GameWindow::PollEvents();*/
 	}
 };
 

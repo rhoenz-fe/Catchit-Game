@@ -103,7 +103,7 @@ namespace Cloud
 
 		Renderer renderer;
 
-		Image pic{ "../Assets/Images/test3.png" };
+		Image pic{ "../Assets/Images/test4.png" };
 		pic.Activate();
 
 		//Shader
@@ -113,9 +113,14 @@ namespace Cloud
 
 		sProgram.Pass2FloatValues("screenSize", GameWindow::GetWidth(), GameWindow::GetHeight());
 
+		mNextFrameTime = std::chrono::steady_clock::now();
+
 		while (true) {
-			glClearColor(0.3f, 0.0f, 0.0f, 1.0f);
-			glClear(GL_COLOR_BUFFER_BIT);
+
+
+			/*glClearColor(0.3f, 0.0f, 0.0f, 1.0f);
+			glClear(GL_COLOR_BUFFER_BIT);*/
+			renderer.Clear();
 
 			/*
 			glBindVertexArray(VAO);
@@ -125,13 +130,15 @@ namespace Cloud
 			renderer.Draw(pic, { 200, 100 });
 
 			OnUpdate();
+
+			std::this_thread::sleep_until(mNextFrameTime);
+
+			Cloud::GameWindow::SwapBuffers();
+			Cloud::GameWindow::PollEvents();
+
+			mNextFrameTime = std::chrono::steady_clock::now()+ mFrameDuration;
+
 		}
-
-
-
-
-
-
 
 
 

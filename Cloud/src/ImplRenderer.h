@@ -13,5 +13,7 @@ namespace Cloud
 			TextureBox texCoords, 
 			Shader& shader, 
 			ScreeCoord coords) = 0;
+
+		virtual void Clear() = 0;
 	};
 }
