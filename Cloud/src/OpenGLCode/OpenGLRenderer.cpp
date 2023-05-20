@@ -40,7 +40,7 @@ namespace Cloud
 
 	}
 
-	void OpenGLRenderer::Draw(Image& image, TextureBox texCoords, Shader& shader, ScreeCoord coords)
+	void OpenGLRenderer::Draw(Image& image, TextureBox texCoords, Shader& shader, ScreenCoord coords)
 	{
 		/*float vdata[] = {
 	coords.xCoord, coords.yCoord, texCoords.xTexCoord / float(image.GetWidth()), texCoords.yTexCoord / float(image.GetHeight()),

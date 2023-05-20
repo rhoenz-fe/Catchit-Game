@@ -12,7 +12,7 @@ namespace Cloud
 		Image(const std::string& imageFile);
 		Image(std::string&& imageFile);
 
-		void Activate();
+		//void Activate();
 
 		int GetWidth() const;
 		int GetHeight() const;

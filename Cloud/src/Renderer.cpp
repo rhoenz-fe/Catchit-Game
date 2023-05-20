@@ -17,7 +17,7 @@ namespace Cloud
 #endif
 	
 
-	void Renderer::Draw(Image& image, Shader& shader, ScreeCoord coords)
+	void Renderer::Draw(Image& image, Shader& shader, ScreenCoord coords)
 	{
 		mImplementation->Draw(image, 
 			{0, 0, image.GetWidth(), image.GetHeight()}, 
@@ -25,7 +25,7 @@ namespace Cloud
 			coords);
 	}
 
-	void Renderer::Draw(Image& image, ScreeCoord coords)
+	void Renderer::Draw(Image& image, ScreenCoord coords)
 	{
 		mDefaultShader.Pass2FloatValues("screenSize", GameWindow::GetWidth(), GameWindow::GetHeight());
 
@@ -35,12 +35,12 @@ namespace Cloud
 			coords);
 	}
 
-	void Renderer::Draw(Image& image, TextureBox texCoords, Shader& shader, ScreeCoord coords)
+	void Renderer::Draw(Image& image, TextureBox texCoords, Shader& shader, ScreenCoord coords)
 	{
 		mImplementation->Draw(image, texCoords, shader, coords);
 	}
 
-	void Renderer::Draw(Image& image, TextureBox texCoords, ScreeCoord coords)
+	void Renderer::Draw(Image& image, TextureBox texCoords, ScreenCoord coords)
 	{
 		mDefaultShader.Pass2FloatValues("screenSize", GameWindow::GetWidth(), GameWindow::GetHeight());
 
@@ -48,6 +48,16 @@ namespace Cloud
 			texCoords,
 			mDefaultShader,
 			coords);
+	}
+
+	void Renderer::Draw(Unit& unit, Shader& shader)
+	{
+		Draw(unit.mImage, shader, unit.mPosition);
+	}
+
+	void Renderer::Draw(Unit& unit)
+	{
+		Draw(unit.mImage, unit.mPosition);
 	}
 
 	void Renderer::Clear()

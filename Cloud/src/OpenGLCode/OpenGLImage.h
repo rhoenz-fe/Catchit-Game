@@ -11,7 +11,7 @@ namespace Cloud
 		OpenGLImage(const std::string& imageFile);
 		OpenGLImage(std::string&& imageFile);
 
-		virtual void Activate() override;
+		//virtual void Activate() override;
 
 		virtual int GetWidth() const override;
 		virtual int GetHeight() const override;
