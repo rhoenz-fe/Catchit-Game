@@ -1,9 +1,9 @@
 Unless it's just my computer, it does take a bit to start up but please give it a few minutes to load!
 
 The point of the game is collecting rain drops!
-One by one a "rain drop" (a small blue square) falls from the top of the window.
-You are able to control the bucket at the bottom of the window to catch that drop, but you can only go left and right using the arrow keys. 
-The game ends when you catch 15 rain drops! The amount you've caught is shown the upper right corner of the window.
+One by one a "rain drop" (a small blue square) falls from the top of the window where a "cloud" appears.
+You are able to control the bucket at the bottom of the window to catch that drop, but you can only go left and right using the arrow keys.
+The game ends when you catch 15 rain drops! The amount you've caught is shown on the upper right corner of the window and you also get a splash indicator whenever you catch one. 
 
 Be careful!
 The more drops you catch, the faster they will drop.
