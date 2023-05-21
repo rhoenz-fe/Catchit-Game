@@ -1,0 +1,13 @@
+Unless it's just my computer, it does take a bit to start up but please give it a few minutes to load!
+
+The point of the game is collecting rain drops!
+One by one a "rain drop" (a small blue square) falls from the top of the window.
+You are able to control the bucket at the bottom of the window to catch that drop, but you can only go left and right using the arrow keys. 
+The game ends when you catch 15 rain drops!
+
+Be careful!
+The more drops you catch, the faster they will drop.
+That's not the only thing that'll be dropping fast too. There will be random chances of a brick falling from the sky.
+If you get hit by one of them,  it is game over!
+
+I hope you have fun!
