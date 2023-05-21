@@ -22,11 +22,6 @@ namespace Cloud {
 		return mImage.GetHeight();
 	}
 
-	int Unit::GetYCoord() const
-	{
-		return mPosition.yCoord;
-	}
-
 	bool Unit::GetBrick() const
 	{
 		return brick;

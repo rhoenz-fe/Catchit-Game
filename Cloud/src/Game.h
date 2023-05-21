@@ -21,6 +21,8 @@ namespace Cloud {
 		Renderer renderer;
 		Image Score{ "../Assets/Images/zero.png" };
 		Image background{ "../Assets/Images/Rainback.png" };
+		Image splash{ "../Assets/Images/Splash.png" };
+		Image cloud{ "../Assets/Images/cloud.png" };
 		Unit playerUnit{ "../Assets/Images/bucket.png", {350, 10} };
 		std::vector<Unit> tearDrops{};
 		int score = 0;
@@ -29,5 +31,6 @@ namespace Cloud {
 		void UpdateDropUnit(Unit& drop);
 		void CheckCollision(bool& closeGame);
 		void Scoreboard(bool& closeGame);
+		void TearDrop();
 	};
 }

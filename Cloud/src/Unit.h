@@ -14,7 +14,7 @@ namespace Cloud
 
 		int GetWidth() const;
 		int GetHeight() const;
-		int GetYCoord() const;
+		
 		bool GetBrick() const;
 		void SetBrick();
 
