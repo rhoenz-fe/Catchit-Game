@@ -13,7 +13,7 @@ namespace Cloud
 		shoe = rand() % 5;
 		renderer.Clear();
 		renderer.Draw(background, { 0, 0 });
-		renderer.Draw(playerUnit);
+		renderer.Draw(bucketUnit);
 
 		Scoreboard(closeGame);
 		TearDrop();
@@ -23,10 +23,10 @@ namespace Cloud
 
 	void Game::OnKeyPressed(const KeyPressed& e)
 	{
-		if (e.GetKeyCode() == CLOUD_KEY_RIGHT && playerUnit.GetCoords().xCoord <= 600)
-			playerUnit.UpdateXCoord(70);
-		else if (e.GetKeyCode() == CLOUD_KEY_LEFT && playerUnit.GetCoords().xCoord >= 50)
-			playerUnit.UpdateXCoord(-70);
+		if (e.GetKeyCode() == CLOUD_KEY_RIGHT && bucketUnit.GetCoords().xCoord <= 600)
+			bucketUnit.UpdateXCoord(70);
+		else if (e.GetKeyCode() == CLOUD_KEY_LEFT && bucketUnit.GetCoords().xCoord >= 50)
+			bucketUnit.UpdateXCoord(-70);
 	}
 
 	void Game::SpawnDropUnit()
@@ -67,12 +67,12 @@ namespace Cloud
 
 	void Game::CheckCollision(bool& closeGame)
 	{
-		if (!tearDrops.empty() && UnitsOverlap(playerUnit, tearDrops[0]) && tearDrops[0].GetBrick()) {
+		if (!tearDrops.empty() && UnitsOverlap(bucketUnit, tearDrops[0]) && tearDrops[0].GetBrick()) {
 			closeGame = true;
 		}
-		else if(!tearDrops.empty() && UnitsOverlap(playerUnit, tearDrops[0])) {
+		else if(!tearDrops.empty() && UnitsOverlap(bucketUnit, tearDrops[0])) {
 			score++;
-			renderer.Draw(splash, {playerUnit.GetCoords().xCoord, playerUnit.GetCoords().yCoord+75});
+			renderer.Draw(splash, { bucketUnit.GetCoords().xCoord, bucketUnit.GetCoords().yCoord+75});
 			tearDrops.pop_back();
 		}
 		
