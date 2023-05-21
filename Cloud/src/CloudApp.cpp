@@ -15,10 +15,9 @@ namespace Cloud
 	CloudApp::CloudApp()
 	{
 		GameWindow::Init();
-		GameWindow::CreateWindow(800, 600, "Test Name");
+		GameWindow::CreateWindow(700, 800, "Test Name");
 
 		SetWindowCloseCallback([this]() {DefaultWindowCloseHandler(); });
-		//SetWindowCloseCallback(std::bind(&CloudApp::DefaultWindowCloseHandler, this));
 	}
 
 	void CloudApp::Run()
@@ -28,7 +27,7 @@ namespace Cloud
 
 		while (!mGameWindowShouldClose) 
 		{
-			OnUpdate();
+			OnUpdate(mGameWindowShouldClose);
 
 			std::this_thread::sleep_until(mNextFrameTime);
 
