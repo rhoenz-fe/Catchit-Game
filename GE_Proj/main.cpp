@@ -15,25 +15,22 @@ public:
 	{
 		renderer.Clear();
 		renderer.Draw(back, { 0, 0 });
-		renderer.Draw(unit, {100,100});
+		renderer.Draw(unit);
 	}
 
 	void MyKeyPressedFunc(const Cloud::KeyPressed& e)
 	{
 		if (e.GetKeyCode() == CLOUD_KEY_RIGHT)
-			//unit.UpdateXCoord(20);
-		//else if (e.GetKeyCode() == CLOUD_KEY_LEFT)
-			//unit.UpdateXCoord(-20);
-		return;
+			unit.UpdateXCoord(20);
+		else if (e.GetKeyCode() == CLOUD_KEY_LEFT)
+			unit.UpdateXCoord(-20);
 	}
 
 private:
 	Cloud::Renderer renderer;
-
-	//Cloud::Unit unit{ "../Assets/Images/test.png", {100,100} };
 	Cloud::Image back{ "../Assets/Images/Desert.png" };
-	Cloud::Image unit{ "../Assets/Images/test.png" };
-	//Cloud::Unit unit{ "../Assets/Images/test.png", {100,100} };
+	Cloud::Unit unit{ "../Assets/Images/test4.png", {100,100} };
+
 };
 
 CLOUD_GAME_START(GE_Proj_App);

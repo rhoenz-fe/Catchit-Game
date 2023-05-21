@@ -11,6 +11,7 @@ namespace Cloud {
 		//unsigned int texture1;
 		glGenTextures(1, &mtexture);
 		glBindTexture(GL_TEXTURE_2D, mtexture);
+		
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
@@ -57,13 +58,11 @@ namespace Cloud {
 		stbi_image_free(data);
 	}
 
-	/*void OpenGLImage::Activate()
+	void OpenGLImage::Activate()
 	{
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-		glGenerateMipmap(GL_TEXTURE_2D);
-		stbi_image_free(data);
+		glBindTexture(GL_TEXTURE_2D, mtexture);
 		
-	}*/
+	}
 
 	int OpenGLImage::GetWidth() const
 	{

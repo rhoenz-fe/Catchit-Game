@@ -21,10 +21,10 @@ namespace Cloud {
 #endif
 	}
 
-	/*void Image::Activate()
+	void Image::Activate()
 	{
 		mImplementation->Activate();
-	}*/
+	}
 
 	int Image::GetWidth() const
 	{
