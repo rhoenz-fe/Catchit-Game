@@ -16,19 +16,7 @@ namespace Cloud
 		renderer.Draw(playerUnit);
 
 		Scoreboard(closeGame);
-		
-		if (tearDrops.empty())
-		{
-			SpawnDropUnit();
-		}
-		else {
-			UpdateDropUnit(tearDrops[0]);
-			renderer.Draw(tearDrops[0]);
-			if (tearDrops[0].GetYCoord() <= 0) {
-				tearDrops.pop_back();
-			}
-		}
-
+		TearDrop();
 		CheckCollision(closeGame);
 
 	}
@@ -84,7 +72,7 @@ namespace Cloud
 		}
 		else if(!tearDrops.empty() && UnitsOverlap(playerUnit, tearDrops[0])) {
 			score++;
-			
+			renderer.Draw(splash, {playerUnit.GetCoords().xCoord, playerUnit.GetCoords().yCoord+75});
 			tearDrops.pop_back();
 		}
 		
@@ -155,5 +143,20 @@ namespace Cloud
 			closeGame = true;
 		}
 
+	}
+	void Game::TearDrop()
+	{
+		if (tearDrops.empty())
+		{
+			SpawnDropUnit();
+		}
+		else {
+			renderer.Draw(cloud, {tearDrops[0].GetCoords().xCoord-100, 720});
+			UpdateDropUnit(tearDrops[0]);
+			renderer.Draw(tearDrops[0]);
+			if (tearDrops[0].GetCoords().yCoord <= 0) {
+				tearDrops.pop_back();
+			}
+		}
 	}
 }
