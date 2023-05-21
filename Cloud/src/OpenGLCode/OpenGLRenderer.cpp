@@ -42,12 +42,6 @@ namespace Cloud
 
 	void OpenGLRenderer::Draw(Image& image, TextureBox texCoords, Shader& shader, ScreenCoord coords)
 	{
-		/*float vdata[] = {
-	coords.xCoord, coords.yCoord, texCoords.xTexCoord / float(image.GetWidth()), texCoords.yTexCoord / float(image.GetHeight()),
-	coords.xCoord, coords.yCoord + image.GetHeight(), texCoords.xTexCoord / float(image.GetWidth()), (texCoords.yTexCoord + texCoords.texHeight) / float(image.GetHeight()),
-	coords.xCoord + image.GetWidth(), coords.yCoord + image.GetHeight(), (texCoords.xTexCoord + texCoords.texWidth) / float(image.GetWidth()), (texCoords.yTexCoord + texCoords.texHeight) / float(image.GetHeight()),
-	coords.xCoord + image.GetWidth(), coords.yCoord, (texCoords.xTexCoord + texCoords.texWidth) / float(image.GetWidth()), texCoords.yTexCoord / float(image.GetHeight())
-		};*/
 
 		float vdata[] ={
 			coords.xCoord,
