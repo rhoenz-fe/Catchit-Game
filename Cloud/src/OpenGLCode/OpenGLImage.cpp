@@ -8,7 +8,6 @@ namespace Cloud {
 	OpenGLImage::OpenGLImage(const std::string& imageFile)
 	{
 
-		//unsigned int texture1;
 		glGenTextures(1, &mtexture);
 		glBindTexture(GL_TEXTURE_2D, mtexture);
 		
@@ -18,7 +17,6 @@ namespace Cloud {
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-		//int width, height, nrChannels;
 		stbi_set_flip_vertically_on_load(true);
 		unsigned char* data = stbi_load(imageFile.c_str(), &width, &height, &nrChannels, 0);
 
@@ -35,7 +33,7 @@ namespace Cloud {
 	OpenGLImage::OpenGLImage(std::string&& imageFile)
 	{
 
-		//unsigned int texture1;
+		
 		glGenTextures(1, &mtexture);
 		glBindTexture(GL_TEXTURE_2D, mtexture);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
@@ -44,7 +42,7 @@ namespace Cloud {
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-		//int width, height, nrChannels;
+		
 		stbi_set_flip_vertically_on_load(true);
 		data = stbi_load(imageFile.c_str(), &width, &height, &nrChannels, 0);
 
