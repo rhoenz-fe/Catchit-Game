@@ -40,7 +40,7 @@ namespace Cloud
 
 	}
 
-	void OpenGLRenderer::Draw(Image& image, TextureBox texCoords, Shader& shader, ScreeCoord coords)
+	void OpenGLRenderer::Draw(Image& image, TextureBox texCoords, Shader& shader, ScreenCoord coords)
 	{
 		/*float vdata[] = {
 	coords.xCoord, coords.yCoord, texCoords.xTexCoord / float(image.GetWidth()), texCoords.yTexCoord / float(image.GetHeight()),
@@ -74,7 +74,7 @@ namespace Cloud
 		
 		glBindVertexArray(mVAO);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vdata), vdata, GL_STATIC_DRAW);
-
+		image.Activate();
 		shader.Activate();
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 

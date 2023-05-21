@@ -12,7 +12,7 @@ namespace Cloud
 		virtual void Draw(Image& image,
 			TextureBox texCoords,
 			Shader& shader,
-			ScreeCoord coords) override;
+			ScreenCoord coords) override;
 
 		virtual void Clear() override;
 

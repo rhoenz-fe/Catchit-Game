@@ -13,10 +13,10 @@ namespace Cloud {
 			xTexCoord(xOnPicture), yTexCoord(yOnPicture), texWidth(boxWidth), texHeight(boxHeight) {};
 	};
 
-	struct ScreeCoord {
+	struct ScreenCoord {
 		int xCoord{ 0 };
 		int yCoord{ 0 };
 
-		ScreeCoord(int x, int y) : xCoord(x), yCoord(y) {};
+		ScreenCoord(int x, int y) : xCoord(x), yCoord(y) {};
 	};
 }

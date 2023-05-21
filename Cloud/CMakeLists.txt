@@ -14,6 +14,10 @@ set(HEADER_FILES
 	src/Image.h
 	src/ImplImage.h
 	src/OpenGLCode/OpenGLImage.h
+	src/Unit.h
+	src/RendererTypes.h
+	src/CloudEvents.h
+	src/CloudKeys.h
 )
 
 set(SOURCE_FILES
@@ -26,6 +30,8 @@ set(SOURCE_FILES
 	src/OpenGLCode/OpenGLShader.cpp
 	src/Image.cpp
 	src/OpenGLCode/OpenGLImage.cpp
+	src/Unit.cpp
+	src/CloudEvents.cpp
 
 )
 
