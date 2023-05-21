@@ -23,7 +23,7 @@ namespace Cloud {
 		Image background{ "../Assets/Images/Rainback.png" };
 		Image splash{ "../Assets/Images/Splash.png" };
 		Image cloud{ "../Assets/Images/cloud.png" };
-		Unit playerUnit{ "../Assets/Images/bucket.png", {350, 10} };
+		Unit bucketUnit{ "../Assets/Images/bucket.png", {350, 10} };
 		std::vector<Unit> tearDrops{};
 		int score = 0;
 		int shoe = 0;
