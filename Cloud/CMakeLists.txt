@@ -18,6 +18,7 @@ set(HEADER_FILES
 	src/RendererTypes.h
 	src/CloudEvents.h
 	src/CloudKeys.h
+	src/Game.h
 )
 
 set(SOURCE_FILES
@@ -32,6 +33,7 @@ set(SOURCE_FILES
 	src/OpenGLCode/OpenGLImage.cpp
 	src/Unit.cpp
 	src/CloudEvents.cpp
+	src/Game.cpp
 
 )
 

@@ -12,7 +12,7 @@ namespace Cloud
 	class CLOUD_API CloudApp
 	{
 	public:
-		virtual void OnUpdate() = 0;
+		virtual void OnUpdate(bool& closeGame) = 0;
 
 		CloudApp();
 
@@ -25,7 +25,6 @@ namespace Cloud
 	private:
 		std::chrono::milliseconds mFrameDuration{ std::chrono::milliseconds{1000} / FPS };
 		std::chrono::steady_clock::time_point mNextFrameTime;
-
 		bool mGameWindowShouldClose{ false };
 
 		void DefaultWindowCloseHandler();

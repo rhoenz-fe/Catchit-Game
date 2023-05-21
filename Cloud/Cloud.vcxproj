@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\CloudApp.cpp" />
     <ClCompile Include="src\CloudEvents.cpp" />
+    <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\GameWindow.cpp" />
     <ClCompile Include="src\GLFWCode\GLFWimplementation.cpp" />
     <ClCompile Include="src\Image.cpp" />
@@ -41,6 +42,7 @@
     <ClInclude Include="src\CloudEvents.h" />
     <ClInclude Include="src\CloudKeys.h" />
     <ClInclude Include="src\CloudUtil.h" />
+    <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\GameWindow.h" />
     <ClInclude Include="src\GLFWCode\GLFWimplementation.h" />
     <ClInclude Include="src\Image.h" />

@@ -14,6 +14,9 @@ namespace Cloud
 
 		int GetWidth() const;
 		int GetHeight() const;
+		int GetYCoord() const;
+		bool GetBrick() const;
+		void SetBrick();
 
 		ScreenCoord GetCoords() const;
 		void SetCoords(ScreenCoord newCoords);
@@ -23,6 +26,7 @@ namespace Cloud
 	private:
 		Image mImage;
 		ScreenCoord mPosition;
+		bool brick = false;
 
 		friend class Renderer;
 		friend CLOUD_API bool UnitsOverlap(const Unit& a, const Unit& b);

@@ -11,3 +11,4 @@
 #include "../src/CloudEvents.h"
 #include "../src/CloudKeys.h"
 #include "../src/Unit.h"
+#include "../src/Game.h"

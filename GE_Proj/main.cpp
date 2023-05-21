@@ -11,25 +11,19 @@ public:
 
 	}
 
-	virtual void OnUpdate() override
+	virtual void OnUpdate(bool& closeGame) override
 	{
-		renderer.Clear();
-		renderer.Draw(back, { 0, 0 });
-		renderer.Draw(unit);
+		startGame.GameRunnning(closeGame);
 	}
 
 	void MyKeyPressedFunc(const Cloud::KeyPressed& e)
 	{
-		if (e.GetKeyCode() == CLOUD_KEY_RIGHT)
-			unit.UpdateXCoord(20);
-		else if (e.GetKeyCode() == CLOUD_KEY_LEFT)
-			unit.UpdateXCoord(-20);
+		startGame.OnKeyPressed(e);
 	}
 
 private:
-	Cloud::Renderer renderer;
-	Cloud::Image back{ "../Assets/Images/Desert.png" };
-	Cloud::Unit unit{ "../Assets/Images/test4.png", {100,100} };
+	Cloud::Game startGame;
+
 
 };
 
