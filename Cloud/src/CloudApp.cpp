@@ -15,7 +15,7 @@ namespace Cloud
 	CloudApp::CloudApp()
 	{
 		GameWindow::Init();
-		GameWindow::CreateWindow(700, 800, "Test Name");
+		GameWindow::CreateWindow(700, 800, "WaterBucket");
 
 		SetWindowCloseCallback([this]() {DefaultWindowCloseHandler(); });
 	}
